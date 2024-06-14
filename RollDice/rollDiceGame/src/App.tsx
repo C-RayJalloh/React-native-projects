@@ -1,8 +1,10 @@
 
 
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import {
+  Image,
+  ImageSourcePropType,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -10,8 +12,25 @@ import {
   View,
 } from 'react-native';
 
+// importing the images
+import DiceOne from '../assets/One.png'
+import DiceTwo from '../assets/One.png'
+import DiceThree from '../assets/One.png'
+import DiceFour from '../assets/One.png'
+import DiceFive from '../assets/One.png'
 
+// imageSourcePropType - to pass on images
+type DiceProps = PropsWithChildren<{
+   imageUrl: ImageSourcePropType
+}>
 
+const Dice = ({imageUrl}: DiceProps): React.JSX.Element {
+  return (
+    <View style={styles.diceContainer}>
+      <Image source={imageUrl} style={styles.diceImage} />
+    </View>
+  );
+}
 
 function App(): React.JSX.Element {
   return (
