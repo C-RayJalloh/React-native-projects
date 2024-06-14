@@ -67,7 +67,6 @@ function App(): React.JSX.Element {
 
   }
 
-
   return (
     <View style={styles.container}>
       <Dice imageUrl={diceImg} />
