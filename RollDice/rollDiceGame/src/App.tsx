@@ -1,10 +1,9 @@
-
-
-import React, { PropsWithChildren, useState } from 'react';
+import React, {PropsWithChildren, useState} from 'react';
 
 import {
   Image,
   ImageSourcePropType,
+  Pressable,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -13,16 +12,17 @@ import {
 } from 'react-native';
 
 // importing the images
-import DiceOne from '../assets/One.png'
-import DiceTwo from '../assets/One.png'
-import DiceThree from '../assets/One.png'
-import DiceFour from '../assets/One.png'
-import DiceFive from '../assets/One.png'
+import DiceOne from '../assets/One.png';
+import DiceTwo from '../assets/Two.png';
+import DiceThree from '../assets/Three.png';
+import DiceFour from '../assets/Four.png';
+import DiceFive from '../assets/Five.png';
+import DiceSix from '../assets/Six.png';
 
 // imageSourcePropType - to pass on images
 type DiceProps = PropsWithChildren<{
-   imageUrl: ImageSourcePropType
-}>
+  imageUrl: ImageSourcePropType;
+}>;
 
 // A DICE IMAGE COMPONENT
 const Dice = ({imageUrl}: DiceProps): React.JSX.Element => {
@@ -31,18 +31,52 @@ const Dice = ({imageUrl}: DiceProps): React.JSX.Element => {
       <Image source={imageUrl} style={styles.diceImage} />
     </View>
   );
-}
+};
 
 function App(): React.JSX.Element {
-  const [ diceImg, setDiceImg ] = useState(DiceOne)
+  const [diceImg, setDiceImg] = useState(DiceOne);
+
+  // rendering the images randomly 
+  const rollDiceOnTap = () => {
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+
+    switch (randomNumber) {
+      case 1:
+        setDiceImg(DiceOne)
+        break;
+      case 2:
+        setDiceImg(DiceTwo)
+        break;
+      case 3:
+        setDiceImg(DiceThree)
+        break;
+      case 4:
+        setDiceImg(DiceFour)
+        break;
+      case 5:
+        setDiceImg(DiceFive)
+        break;
+      case 6:
+        setDiceImg(DiceSix)
+        break;
+    
+      default:
+        setDiceImg(DiceOne)
+        break;
+    }
+
+  }
+
 
   return (
-
-     
-        <View style={styles.container}>
-        <Dice imageUrl={diceImg}/>
-        </View>
-
+    <View style={styles.container}>
+      <Dice imageUrl={diceImg} />
+      <Pressable onPress={rollDiceOnTap}>
+        <Text style={styles.rollDiceBtnText}>
+          Roll the Dice
+        </Text>
+      </Pressable>
+    </View>
   );
 }
 
