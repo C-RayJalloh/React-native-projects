@@ -1,6 +1,6 @@
 
 
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, useState } from 'react';
 
 import {
   Image,
@@ -24,7 +24,8 @@ type DiceProps = PropsWithChildren<{
    imageUrl: ImageSourcePropType
 }>
 
-const Dice = ({imageUrl}: DiceProps): React.JSX.Element {
+// A DICE IMAGE COMPONENT
+const Dice = ({imageUrl}: DiceProps): React.JSX.Element => {
   return (
     <View style={styles.diceContainer}>
       <Image source={imageUrl} style={styles.diceImage} />
@@ -33,14 +34,15 @@ const Dice = ({imageUrl}: DiceProps): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
+  const [ diceImg, setDiceImg ] = useState(DiceOne)
+
   return (
-    <SafeAreaView>
+
      
-        <View >
-        <Text>Hello worldly world</Text>
+        <View style={styles.container}>
+        <Dice imageUrl={diceImg}/>
         </View>
-    
-    </SafeAreaView>
+
   );
 }
 
