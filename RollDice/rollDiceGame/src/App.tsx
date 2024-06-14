@@ -16,14 +16,10 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView>
      
-      <View>
         <View >
         <Text>Hello worldly world</Text>
         </View>
-      </View>
-
-  
-  
+    
     </SafeAreaView>
   );
 }
