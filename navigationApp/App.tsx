@@ -18,9 +18,6 @@ import {
 } from 'react-native';
 
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
 
 
 
@@ -28,10 +25,12 @@ function App(): React.JSX.Element {
 
 
   return (
-    <View>
-       <Text>Testing</Text>
-    </View>
-  );
+    <SafeAreaView>
+      <View>
+         <Text>Testing</Text>
+      </View>
+    </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
