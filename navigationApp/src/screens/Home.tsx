@@ -13,11 +13,12 @@ export default function Home({navigation}: HomeScreenProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-      
+
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details', {ProductId: '60'})}
       />
+
       
     </View>
   )
