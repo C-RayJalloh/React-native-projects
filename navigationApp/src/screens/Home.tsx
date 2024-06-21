@@ -1,39 +1,52 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-// NAVIGATION for screen props
-import { NativeStackScreenProps } from '@react-navigation/native-stack'
+//React navigation
+import {NativeStackScreenProps} from "@react-navigation/native-stack"
+import {RootStackParamList} from "../App"
 
-import {RootStackParamList} from '../App'
+import ProductItem from '../components/ProductItem'
+import Separator from '../components/Separator'
 
-// setting up type safety
- type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>
+// data
+import { PRODUCTS_LIST } from '../data/constants'
 
-export default function Home({navigation}: HomeScreenProps) {
+
+
+type HomeProps = NativeStackScreenProps<RootStackParamList, "Home">
+
+const Home = ({navigation}: HomeProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
-    {/* navigating from home page to details */}
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details', {ProductId: '60'})}
+      <FlatList
+      data={PRODUCTS_LIST}
+      keyExtractor={item => item.id}
+      ItemSeparatorComponent={Separator}
+      renderItem={({item}) => (
+        <Pressable
+        onPress={() => {
+          navigation.navigate('Details', {
+            product: item
+          })
+        }}
+        >
+          <ProductItem product={item}/>
+        </Pressable>
+      )}
       />
-
-      
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#FFF2F2',
-    },
-    text: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        color: '#000000'
-    }
-})
+  container: {
+    flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+
+    padding: 12,
+    backgroundColor: '#FFFFFF',
+  },
+});
+
+export default Home

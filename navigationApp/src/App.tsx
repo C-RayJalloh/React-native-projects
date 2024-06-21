@@ -22,22 +22,22 @@ import Details from './screens/Details'
 // propTypes for the ROOT PARAM LISTS
 export type RootStackParamList = {
   Home: undefined;
- Details: {product: Product }
-
+ Details: { product: Product }
 };
 
-// Navigation configuration
+// here the stack knows what screen will get the type of data
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App(): React.JSX.Element {
   return (
+    // Navigation configuration
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Home} options={{
-          title: 'Homepage'
+          title: 'Trending Products'
         }} />
         <Stack.Screen name="Details" component={Details} options={{
-          title: 'Details page'
+          title: 'Product Details'
         }} />
       </Stack.Navigator>
     </NavigationContainer>
