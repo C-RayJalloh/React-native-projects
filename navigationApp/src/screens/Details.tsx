@@ -5,13 +5,20 @@ import React from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 import {RootStackParamList} from '../App'
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from 'react-native-screens/lib/typescript/native-stack/types'
 
 type DetailsProps = NativeStackScreenProps<RootStackParamList, 'Details'>
-export default function Details({navigation}: DetailsProps) {
+export default function Details({route}: DetailsProps) {
+
+    const { ProductId} = route.params
+
+    // using the useNavigation Hook
+    const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Details Page</Text>
-      <Text style={styles.text}>{}</Text>
+      <Text style={styles.text}>Product Id</Text>
+      <Text style={styles.text}>{ProductId}</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   )
