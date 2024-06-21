@@ -18,13 +18,21 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Home from '../src/screens/Home'
 import Details from './screens/Details'
 
+
+// propTypes
+export type RootStackParamList = {
+  Home: undefined;
+ Details: { ProductId: string }
+
+};
+
 // Navigation configuration
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
