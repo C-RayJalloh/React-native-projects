@@ -22,7 +22,7 @@ import Details from './screens/Details'
 // propTypes
 export type RootStackParamList = {
   Home: undefined;
- Details: { ProductId: string }
+ Details: { product: Product }
 
 };
 

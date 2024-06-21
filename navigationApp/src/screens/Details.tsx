@@ -11,7 +11,7 @@ import {NativeStackNavigationProp} from 'react-native-screens/lib/typescript/nat
 type DetailsProps = NativeStackScreenProps<RootStackParamList, 'Details'>;
 
 export default function Details({route}: DetailsProps) {
-  const {ProductId} = route.params;
+  const {Product} = route.params;
 
   // using the useNavigation Hook
   const navigation =
@@ -19,7 +19,7 @@ export default function Details({route}: DetailsProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Product Id</Text>
-      <Text style={styles.text}>{ProductId}</Text>
+      <Text style={styles.text}>{Product}</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
     </View>
   );
