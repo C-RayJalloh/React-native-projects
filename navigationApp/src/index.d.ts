@@ -1,4 +1,4 @@
-// defining an interface for product
+// defining an interface for product ( DATA-TYPES)
 interface Product {
     id: string;
     name: string;

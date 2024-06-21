@@ -19,10 +19,10 @@ import Home from '../src/screens/Home'
 import Details from './screens/Details'
 
 
-// propTypes
+// propTypes for the ROOT PARAM LISTS
 export type RootStackParamList = {
   Home: undefined;
- Details: { product: Product }
+ Details: {product: Product }
 
 };
 
