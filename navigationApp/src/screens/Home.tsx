@@ -13,7 +13,7 @@ export default function Home({navigation}: HomeScreenProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-
+    {/* navigating from home page to details */}
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details', {ProductId: '60'})}
