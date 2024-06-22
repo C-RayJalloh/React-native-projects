@@ -19,10 +19,10 @@ import Home from '../src/screens/Home'
 import Details from './screens/Details'
 
 
-// propTypes for the ROOT PARAM LISTS
+// propTypes for the ROUTE
 export type RootStackParamList = {
   Home: undefined;
- Details: { product: Product }
+  Details: { product: Product }
 };
 
 // here the stack knows what screen will get the type of data

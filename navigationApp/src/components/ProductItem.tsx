@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React, { PropsWithChildren } from 'react'
 
-
+// Defining a type 'ProductProps' that extends PropsWithChildren and includes a 'product' prop of type 'Product'
 type ProductProps = PropsWithChildren<{
     product: Product
 }>
