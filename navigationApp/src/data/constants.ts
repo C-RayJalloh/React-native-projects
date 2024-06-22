@@ -32,7 +32,7 @@ export const PRODUCTS_LIST: Product[] = [
       {
         id: '3',
         name: 'APPLE iPhone 12 (White, 64 GB)',
-        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/kfzq8i80/mobile/q/f/n/apple-iphone-12-dummyapplefsn-original-imafwgbreqr6rdvg.jpeg',
+        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ku5ufm80/mobile/y/r/r/apple-iphone-13-mlpk3hn-a-original-imag6vpgphzqa94j.jpeg',
         originalPrice: 59990,
         discountPrice: 52999,
         offerPercentage: 12,
@@ -47,7 +47,7 @@ export const PRODUCTS_LIST: Product[] = [
       {
         id: '4',
         name: 'APPLE iPhone 11 (Black, 128 GB)',
-        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/k0lbdzk0pkrrdj/mobile/p/n/3/apple-iphone-11-mhda3hn-a-original-imafnysdbwghqrsz.jpeg',
+        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ku5ufm80/mobile/y/r/r/apple-iphone-13-mlpk3hn-a-original-imag6vpgphzqa94j.jpeg',
         originalPrice: 54990,
         discountPrice: 48999,
         offerPercentage: 11,
@@ -62,7 +62,7 @@ export const PRODUCTS_LIST: Product[] = [
       {
         id: '5',
         name: 'APPLE iPhone SE (2nd Gen, White, 64 GB)',
-        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/k9u8zgw0/mobile/f/2/j/apple-iphone-se-mxtj2hn-a-original-imafrjzznrac4psh.jpeg',
+        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ku5ufm80/mobile/y/r/r/apple-iphone-13-mlpk3hn-a-original-imag6vpgphzqa94j.jpeg',
         originalPrice: 39999,
         discountPrice: 32999,
         offerPercentage: 17,
@@ -77,7 +77,7 @@ export const PRODUCTS_LIST: Product[] = [
       {
         id: '6',
         name: 'APPLE iPhone 14 Pro (Gold, 256 GB)',
-        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/xif0q/mobile/o/p/x/-original-imaghx9qjfn2wajc.jpeg',
+        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ku5ufm80/mobile/y/r/r/apple-iphone-13-mlpk3hn-a-original-imag6vpgphzqa94j.jpeg',
         originalPrice: 129900,
         discountPrice: 118999,
         offerPercentage: 8,
@@ -92,7 +92,7 @@ export const PRODUCTS_LIST: Product[] = [
       {
         id: '7',
         name: 'APPLE iPhone 13 Pro Max (Graphite, 512 GB)',
-        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ktuewsw0/mobile/0/f/q/apple-iphone-13-pro-max-mllf3hn-a-original-imag6y2zf8c9pgwf.jpeg',
+        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ku5ufm80/mobile/y/r/r/apple-iphone-13-mlpk3hn-a-original-imag6vpgphzqa94j.jpeg',
         originalPrice: 169900,
         discountPrice: 159999,
         offerPercentage: 6,
@@ -107,7 +107,7 @@ export const PRODUCTS_LIST: Product[] = [
       {
         id: '8',
         name: 'APPLE iPhone XR (Coral, 128 GB)',
-        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/k0wqwsw0/mobile/y/y/u/apple-iphone-xr-mryd2hn-a-original-imafpdq5ht5kvkkn.jpeg',
+        imageUrl: 'https://rukminim1.flixcart.com/image/300/400/ku5ufm80/mobile/y/r/r/apple-iphone-13-mlpk3hn-a-original-imag6vpgphzqa94j.jpeg',
         originalPrice: 47999,
         discountPrice: 38999,
         offerPercentage: 19,
