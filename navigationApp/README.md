@@ -68,11 +68,30 @@ You've successfully run and modified your React Native App. :partying_face:
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
+
+
+
+# React-Native components used: 
+- View - this is like a container that holds the elements
+- Text - used for typography, headings || paragrahps 
+- Image - used to render the images
+- FlatList - used to render the lists of products 
+- Pressable - this acts a button but it's invisible feature
+
+# React-Native Navigation 
+i used the Stack Navigator to navigate from the trending products to the details page, 
+- Stack.Navigator - used to navigate between screens
+- Stack.Screen - used to define the screen
+- Navigation.navigate - used to navigate between screens
+- NavigationContaier - used to manage all the components on the app
+
+
 # Learn More
 
 To learn more about React Native, take a look at the following resources:
 
 - [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [React Native Navigation Website](https://reactnavigation.org) - learn more about React Native Navigation.
 - [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
